@@ -2,37 +2,19 @@ using UnityEngine;
 
 public class CuttingCounter : BaseCounter
 {
-    [SerializeField] private CuttingRecipeSO[] cuttingRecipeSOArray;
+    [SerializeField] private CuttingRecipeSO[] cuttingRecipes;
 
     public override void Interact(Player player)
     {
         if (!HasKitchenObject())
         {
-            // There isn't a kitchen object on this counter
-            if (player.HasKitchenObject())
-            {
-                // Player's carrying a kitchen object
-                if (HasCuttingRecipe(player.GetKitchenObject().GetKitchenObjectSO()))
-                    player.GetKitchenObject().SetKitchenObjectParent(this);
-            }
-            else
-            {
-                // Player's not carrying anything
-            }
-
+            if (player.HasKitchenObject() && HasCuttingRecipe(player.GetKitchenObject().GetKitchenObjectSO()))
+                player.GetKitchenObject().SetKitchenObjectParent(this);
         }
         else
         {
-            // There's already a kitchen object on this counter
-            if (player.HasKitchenObject())
-            {
-                // Player's carrying something
-            }
-            else
-            {
-                // Player's not carrying anything
+            if (!player.HasKitchenObject())
                 GetKitchenObject().SetKitchenObjectParent(player);
-            }
         }
     }
 
@@ -40,7 +22,7 @@ public class CuttingCounter : BaseCounter
     {
         if (HasKitchenObject() && HasCuttingRecipe(GetKitchenObject().GetKitchenObjectSO()))
         {
-            var outputKitchenObjectSO = GetOutputForInput(GetKitchenObject().GetKitchenObjectSO());
+            var outputKitchenObjectSO = GetCuttingRecipeOutput(GetKitchenObject().GetKitchenObjectSO());
             GetKitchenObject().DestroySelf();
 
             KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
@@ -49,18 +31,14 @@ public class CuttingCounter : BaseCounter
 
     private bool HasCuttingRecipe(KitchenObjectSO kitchenObjectSO)
     {
-        return GetOutputForInput(kitchenObjectSO) != null;
+        return GetCuttingRecipeOutput(kitchenObjectSO) != null;
     }
 
-    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO)
+    private KitchenObjectSO GetCuttingRecipeOutput(KitchenObjectSO inputKitchenObjectSO)
     {
-        foreach (var cuttingRecipeSO in cuttingRecipeSOArray)
-        {
+        foreach (var cuttingRecipeSO in cuttingRecipes)
             if (cuttingRecipeSO.input == inputKitchenObjectSO)
-            {
                 return cuttingRecipeSO.output;
-            }
-        }
         return null;
     }
 }
