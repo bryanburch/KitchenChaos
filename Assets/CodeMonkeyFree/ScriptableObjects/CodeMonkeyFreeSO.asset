@@ -14,43 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: kitchenchaos
-  lastShownTimestamp: 1778126524
+  lastShownTimestamp: 1778818828
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1778126524
+  checkedLastUpdateTimestamp: 1778818828
   lastQOTDResponse:
-    questionId: 299
-    questionText: 'Does this variable get reset when you load a different Scene?
-
-      <p>private
-      static int score;</p>'
-    answerA: Yes
-    answerB: No
-    answerC: Only when loading the Main Menu
+    questionId: 301
+    questionText: What is JSON and what is it useful for?
+    answerA: JavaScript Over Node, programming pattern
+    answerB: JavaScript Object Notation, data format
+    answerC: Jumping-Signal Over Nonce, crypto concept
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1778126524
+  lastQotdTimestamp: 1778818828
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/codeMonkeyToolkit50Off.png
-    topText: My Toolkit is 50% OFF! 40+ Tools and Elements to help you make games
-      BETTER and FASTER!
-    topLink: toolkit
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/gameDevPracticeLab_2.png
+    topText: Weekly Game Mechanic Challenges to help you learn by DOING!
+    topLink: practicelab
     bottomText: My 10+ Years of C# Knowledge in 1 Course!
     bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1778126524
+  lastDynamicHeaderTimestamp: 1778818828
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1778126524
+  websiteLatestMessageTimestamp: 1778818828
   websiteLatestVideos:
     videos:
-    - youTubeId: _WB6Ui5XeH0
-      title: The 10 SECRETS to making BETTER games!
-    - youTubeId: Hg5u-qEIoDo
-      title: What I DON'T want to happen to YOU!
-    - youTubeId: 2gP-2rQ3o_Q
-      title: This Tool FIXES your Unity Project!
-    - youTubeId: 1bLBKMQ9YwE
-      title: BEST NEW Visual Assets to INSPIRE YOU! (APRIL 2026)
-  websiteLatestVideosTimestamp: 1778126524
+    - youTubeId: Fb5d_46JfVI
+      title: What are Unity Templates?
+    - youTubeId: pV-tmNmJFjY
+      title: Unity's AI Tools are GENUINELY useful!
+    - youTubeId: _7ACFqhnxTw
+      title: FREE Game Dev Mechanic Challenges! Traffic System and Keypad Access
+        (Learn by DOING!)
+    - youTubeId: 546J2n9Sn5o
+      title: The MOST AWESOME Unity Bundle is HERE! 94% OFF!
+  websiteLatestVideosTimestamp: 1778818828
