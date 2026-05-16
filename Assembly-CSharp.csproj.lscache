@@ -60,6 +60,7 @@ Assets/
   CuttingCounter.cs
   CuttingCounterVisual.cs
   SelectedCounterVisual.cs
+  TrashCounter.cs
  Scripts/
   GameInput.cs
   IKitchenObjectParent.cs
